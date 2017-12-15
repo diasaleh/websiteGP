@@ -95,6 +95,8 @@ f = open('NB_100_1000_hindawi_D500.pickle', 'rb')
 clf = pickle.load(f)
 f.close()
 
+
+
 xCat1test=np.dstack((featuresCat1)).reshape(-1,fn)
 print xCat1test
 print clf.predict_proba(xCat1test)[0][0]*100
