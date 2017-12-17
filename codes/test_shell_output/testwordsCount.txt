@@ -1,1 +1,1 @@
-allwords = 1496
+allwords = 1500

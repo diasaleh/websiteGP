@@ -1,12 +1,38 @@
 /* Space out content a bit */
+@import url('https://fonts.googleapis.com/css?family=Harmattan');
+
 body {
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
+  background-image: url('regal.png');
+  font-family: 'Harmattan', sans-serif !important;
+  font-size: 23px;
+  color: #011936 !important;
+}
+.container{
+  border-radius: 10px;
+  padding-right: 0px;
+  padding-left: 0px;
 
 }
-.Guess{
-  padding: .75rem 4.5rem;
-  font-size: 1.5rem;
+
+.Guess {
+  padding: .55rem 4.5rem;
+  font-size: 36px;
+  color: #011936;
+  /*background-color: #011936;*/
+  /*background-image: linear-gradient(to bottom,  #9BC1BC,#9BC1BC);*/
+  /*border-color: #011936 #011936 #011936;*/
+  border: 2px solid #011936;
+  cursor: pointer;
+  transition: .3s;
+}
+.Guess:hover,
+.Guess:active {
+  color: #F8FFF4 !important;
+  background-color: #011936 !important;
+  background-image: linear-gradient(to bottom, #011936, #011936)!important;
+  border-color: #011936 #011936 #011936!important;
 }
 /* Everything but the jumbotron gets side spacing for mobile first views */
 .header,
@@ -19,7 +45,8 @@ body {
 /* Custom page header */
 .header {
   padding-bottom: 1rem;
-  border-bottom: .05rem solid #e5e5e5;
+  /*border-bottom: .05rem solid #e5e5e5;*/
+  /*background-color: rgba(248,255,244,.7);*/
 }
 
 /* Make the masthead heading the same height as the navigation */
@@ -27,13 +54,14 @@ body {
   margin-top: 0;
   margin-bottom: 0;
   line-height: 3rem;
+  font-size: 39px;
 }
 
 /* Custom page footer */
 .footer {
   padding-top: 1.5rem;
   color: #777;
-  border-top: .05rem solid #e5e5e5;
+  /*border-top: .05rem solid #e5e5e5;*/
 }
 
 /* Customize container */
@@ -48,14 +76,18 @@ body {
 
 /* Main marketing message and sign up button */
 .jumbotron {
+  padding: 2rem 4rem;
   text-align: center;
   border-bottom: .05rem solid #e5e5e5;
+  background-color: rgba(155,193,188,.4);
+  /*padding-top: 0px;*/
 }
 
 
 /* Supporting marketing content */
 .marketing {
   margin: 3rem 0;
+  text-align: right;
 }
 .marketing p + h4 {
   margin-top: 1.5rem;

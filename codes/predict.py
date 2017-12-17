@@ -11,7 +11,8 @@ import pickle
 import random
 
 
-# size=int(sys.argv[3])+1
+wordC=int(sys.argv[1])
+print wordC
 cat1="test"
 fn=12
 farasaFeat = [6,18,26,38,42,54]
@@ -101,8 +102,15 @@ i=0
 # 	i+=1
 # print featuresCat1
 from sklearn import svm
-
-f = open('NB_100_1000_hindawi_D1500.pickle', 'rb')
+if wordC > 1999:
+	f = open('NB_100_1000_hindawi_D2500.pickle', 'rb')
+	print "predict 2500"
+elif wordC > 999:
+	f = open('NB_100_1000_hindawi_D1500.pickle', 'rb')
+	print "predict 1500"
+else:
+	f = open('NB_100_1000_hindawi_D500.pickle', 'rb')
+	print "predict 500"
 clf = pickle.load(f)
 f.close()
 
@@ -110,9 +118,10 @@ f.close()
 
 xCat1test=np.dstack((featuresCat1)).reshape(-1,fn)
 print xCat1test
-print clf.predict(xCat1test)
+print clf.predict(xCat1test)[0]
 
-print clf.predict_proba(xCat1test)
+print (clf.predict_proba(xCat1test)*100)
+print (clf.predict_proba(xCat1test))
 
 
 

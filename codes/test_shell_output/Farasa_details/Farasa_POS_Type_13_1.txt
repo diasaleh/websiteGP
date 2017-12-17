@@ -1,5 +1,0 @@
-أ&ABBREV&
-ب&ABBREV&
-ج&ABBREV&
-د&ABBREV&
-بي&ABBREV&

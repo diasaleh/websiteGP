@@ -14,61 +14,50 @@
     </head>
     <body>
 	    <div class="container">
-		    <header class="header clearfix">
-		        <h3 class="text-center">المتنبيء</h3>
+		    <header class="header text-center clearfix">
+		    	<div class="text-center">
+	        		<img width="320px" class="d-inline-block text-center" src="final2.png"> 
+	        	</div>
+	        	<h3 class="text-center">تنبأ بعصر نص عربي</h3>
+
 		    </header>      	 
 	       
-	        <?php
-
-				if(isset($_POST['addition'])) {
-					chdir('codes');
-					$file_open = fopen("files/TN1.txt","w+");
-					fwrite($file_open, $_POST['addition']);
-					fclose($file_open);
-					
-					shell_exec('sh ./shell.sh files TN 1 test');
-					$output = shell_exec('python predict.py');
-
-					echo "<pre>$output</pre>";
-				}
-				
-
-			?>
 	        <div class="jumbotron">
 <!-- 	          	<h1 class="display-3">Jumbotron heading</h1>
- -->	          	<p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-	          	<form action="" method="POST">
+ -->	    	     	
+ 				<p class="lead"></p>
+ 				<ul dir="rtl" class="text-right">
+ 					<li>أدخل على الأقل 500 كلمة للحصول على نتيجة دقيقة.</li>
+ 					<li>كلما زاد عدد الكلمات المدخلة زادت الدقة.</li>
+ 				</ul>
+	          	<form action="predict.php" method="POST">
 	          	<div class="form-group">
 		    		<label for="input" class="d-block text-right">عدد الكلمات: <span  id="wordCount">0</span></label>
 		    		<textarea dir="rtl" name="addition" id='text' class="form-control" id="input" rows="10"></textarea>
 		  		</div>
-	          	  <button type="submit" class="btn btn-lg btn-info Guess">تنبأ</button>
-
-		        </div>
+	          	  <button type="submit" class="btn btn-lg btn-outline-info Guess">تنبأ</button>
 		        </form>
 
-		        <div class="row marketing">
-	          <div class="col-lg-6">
-	           
 
-	            <h4>Subheading</h4>
-	            <p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
-	          </div>
+		        <div class="row marketing ">
+	          	
+		          	<div class="col-12">
+		          		<h4>كيف يعمل الموقع؟</h4>
+		            	<p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
+		          	</div>
+		        </div>
+		    </div>
+ 
 
-	          <div class="col-lg-6">
-	           
-
-	            <h4>Subheading</h4>
-	            <p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
-	          </div>
-	        </div>
+	            
 
 
-	      <footer class="footer">
-	        <p>&copy; Company 2017</p>
-	      </footer>
+	      
 
 	   </div> <!-- /container -->
+	   	<footer class="footer text-center">
+	        <p>&copy; Al-Motanabe 2017</p>
+	    </footer>
    </body>
 
 </html>
