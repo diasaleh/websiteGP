@@ -11,8 +11,8 @@
 		
 		shell_exec('sh ./shell.sh files TN 1 test');
 		chdir('codes');
-		$output = shell_exec("python predict.py '".$wordsC."'");
-
+		// $output = shell_exec("python predict.py '".$wordsC."'");
+		$output = "hi";
 		echo "<pre>$output</pre>";
 	}
 	
