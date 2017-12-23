@@ -11,9 +11,9 @@ import pickle
 import random
 
 
-wordC=int(sys.argv[1])
-print wordC
-cat1="test"
+cat1=(sys.argv[1])
+wordC=int(sys.argv[2])
+# print wordC
 fn=12
 farasaFeat = [6,18,26,38,42,54]
 charOut = [7,10]
@@ -101,15 +101,19 @@ i=0
 # 	featuresCat1[row][i] = (float(sheet1_6.cell_value(3, col)))
 # 	i+=1
 # print featuresCat1
+# from sklearn import svm
+# from sklearn.ensemble import GradientBoostingClassifier
+# from sklearn.neighbors import KNeighborsClassifier
 from sklearn import svm
-if wordC > 1999:
-	f = open('NB_100_1000_hindawi_D2500.pickle', 'rb')
-	print "predict 2500"
+# clf = svm.SVC(probability=True)
+if wordC > 1700:
+	f = open('NB_100_1000_hindawi_D1500_finalSVM.pickle', 'rb')
+	print "predict 1500 2500"
 elif wordC > 999:
-	f = open('NB_100_1000_hindawi_D1500.pickle', 'rb')
+	f = open('NB_100_1000_hindawi_D1500_finalSVM.pickle', 'rb')
 	print "predict 1500"
 else:
-	f = open('NB_100_1000_hindawi_D500.pickle', 'rb')
+	f = open('NB_100_1000_hindawi_D500_finalSVM.pickle', 'rb')
 	print "predict 500"
 clf = pickle.load(f)
 f.close()
@@ -118,10 +122,21 @@ f.close()
 
 xCat1test=np.dstack((featuresCat1)).reshape(-1,fn)
 print xCat1test
-print clf.predict(xCat1test)[0]
+# print "hi"
+oo = open(cat1+"_P.txt","w")	
+print ( clf.predict(xCat1test)[0])
+predic =  (clf.predict_proba(xCat1test))
+print predic
+print predic[0][0]*100
+print predic[0][1]*100
+print predic[0][2]*100
 
-print (clf.predict_proba(xCat1test)*100)
-print (clf.predict_proba(xCat1test))
+oo.write(str(clf.predict(xCat1test)[0])+"\n")
+oo.write(str(predic[0][0]*100)+"\n")
+oo.write(str(predic[0][1]*100)+"\n")
+oo.write(str(predic[0][2]*100)+"\n")
+oo.close()
+# print (clf.predict_proba(xCat1test))
 
 
 

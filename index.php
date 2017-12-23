@@ -6,7 +6,7 @@
 	    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	    <meta name="description" content="">
 	    <meta name="author" content="">
-        <title>المتنبيء</title>
+        <title>المتنبىء</title>
         <link rel="stylesheet" href="dist/css/bootstrap.min.css" >
     	<link href="dist/css/narrow-jumbotron.css" rel="stylesheet">
 		
@@ -24,7 +24,7 @@
 	       
 	        <div class="jumbotron">
 <!-- 	          	<h1 class="display-3">Jumbotron heading</h1>
- -->	    	     	
+	 -->    	     	
  				<p class="lead"></p>
  				<ul dir="rtl" class="text-right">
  					<li>أدخل على الأقل 500 كلمة للحصول على نتيجة دقيقة.</li>
@@ -41,10 +41,10 @@
 
 		        <div class="row marketing ">
 	          	
-		          	<div class="col-12">
+		          	<!-- <div class="col-12">
 		          		<h4>كيف يعمل الموقع؟</h4>
 		            	<p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
-		          	</div>
+		          	</div> -->
 		        </div>
 		    </div>
  

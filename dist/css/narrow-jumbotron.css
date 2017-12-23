@@ -5,6 +5,7 @@ body {
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
   background-image: url('regal.png');
+  background-attachment: fixed;
   font-family: 'Harmattan', sans-serif !important;
   font-size: 23px;
   color: #011936 !important;
@@ -15,7 +16,11 @@ body {
   padding-left: 0px;
 
 }
+#back{
+  font-size: 26px;
+  padding: .35rem 2.5rem;
 
+}
 .Guess {
   padding: .55rem 4.5rem;
   font-size: 36px;
@@ -73,7 +78,9 @@ body {
 .container-narrow > hr {
   margin: 2rem 0;
 }
-
+.progress{
+  margin-bottom: 20px;
+}
 /* Main marketing message and sign up button */
 .jumbotron {
   padding: 2rem 4rem;
@@ -83,7 +90,12 @@ body {
   /*padding-top: 0px;*/
 }
 
-
+.jumbotron2 {
+  padding: 2rem 4rem;
+  border-bottom: .05rem solid #e5e5e5;
+  background-color: rgba(155,193,188,.4);
+  /*padding-top: 0px;*/
+}
 /* Supporting marketing content */
 .marketing {
   margin: 3rem 0;

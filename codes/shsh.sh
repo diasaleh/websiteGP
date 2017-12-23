@@ -1,0 +1,1 @@
+echo `mkdir $1`
